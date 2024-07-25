@@ -7,6 +7,10 @@ import Hero from "@/components/Hero";
 import Main from "@/components/Main";
 import Carousel from "@/components/Carousel";
 import Service from "@/components/Service";
+import Security from "@/components/Security";
+
+// for json file----
+import { securityData } from "../json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +28,7 @@ export default function Home() {
           <Hero data={data.itemList} />
           <Main list={data.mainContentList} content={data.mainContent} />
           <Service items={data.serviceData} />
+          <Security content={securityData} />
           <Carousel data={data.carouselData} />
         </>
       </main>

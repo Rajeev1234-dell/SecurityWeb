@@ -62,6 +62,15 @@ const carouselData = [
   { no: "1500", desc: "Guards secure" },
 ];
 
+// for security content----
+export const securityData = [
+  {
+    title:
+      "We Provide Customized Security Solutions to Help, Protect Your People ",
+    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+  },
+];
+
 const jsonData = {
   itemList,
   mainContent,
