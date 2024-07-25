@@ -1,0 +1,29 @@
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 70px;
+
+  &__details {
+    border: 1px solid #00000029;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    p {
+      margin: 20px 0px;
+    }
+
+    h4 {
+      @include font-properties(20px, $font-md, $font-sans);
+    }
+  }
+
+  &__profile {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+}

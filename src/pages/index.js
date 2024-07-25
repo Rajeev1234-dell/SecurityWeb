@@ -8,9 +8,11 @@ import Main from "@/components/Main";
 import Carousel from "@/components/Carousel";
 import Service from "@/components/Service";
 import Security from "@/components/Security";
+import Testimonials from "@/components/Testimonials";
 
 // for json file----
 import { securityData } from "../json";
+import { testimonials } from "../json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +32,7 @@ export default function Home() {
           <Service items={data.serviceData} />
           <Security content={securityData} />
           <Carousel data={data.carouselData} />
+          <Testimonials review={testimonials} />
         </>
       </main>
     </>

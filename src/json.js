@@ -71,6 +71,28 @@ export const securityData = [
   },
 ];
 
+// for testimonials section ---
+export const testimonials = [
+  {
+    icon: "./Testimonials/quotes.svg",
+    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    prfile_img: "./Testimonials/profile.svg",
+    name: "Sarah Jhonson",
+  },
+  {
+    icon: "./Testimonials/quotes.svg",
+    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    prfile_img: "./Testimonials/profile.svg",
+    name: "Sarah Jhonson",
+  },
+  {
+    icon: "./Testimonials/quotes.svg",
+    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    prfile_img: "./Testimonials/profile.svg",
+    name: "Sarah Jhonson",
+  },
+];
+
 const jsonData = {
   itemList,
   mainContent,
