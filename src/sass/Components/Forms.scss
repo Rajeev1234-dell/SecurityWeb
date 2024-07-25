@@ -1,0 +1,49 @@
+@import "../Particles/variables";
+@import "../Particles/typography";
+@import "../Particles/mixins";
+
+.bg-img {
+  background-image: url("../../../public/HeroImages/background.svg");
+  background-size: cover;
+}
+
+.forms-section {
+  padding-top: 70px;
+  padding-bottom: 96px;
+
+  input {
+    padding: 21px;
+    margin-top: 17px;
+    height: 60px;
+    width: 100%;
+    @include font-properties(18px, $font-regular, $font-poppin);
+    color: $black-color;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 704px;
+    color: $white-color;
+    margin: auto;
+
+    .messageInput {
+      width: 100%;
+      height: 74px;
+      margin-top: 19px;
+      margin-bottom: 20px;
+      padding: 10px 21px;
+      @include font-properties(18px, $font-regular, $font-poppin);
+      color: $black-color;
+    }
+  }
+
+  &__nameField {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 52px;
+  }
+}

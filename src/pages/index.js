@@ -11,6 +11,7 @@ import Service from "@/components/Service";
 import Security from "@/components/Security";
 import Testimonials from "@/components/Testimonials";
 import Articles from "@/components/Articles";
+import Forms from "@/components/Forms";
 
 // for json file----
 import { securityData } from "../json";
@@ -37,6 +38,7 @@ export default function Home() {
           <Carousel data={data.carouselData} />
           <Testimonials review={testimonials} />
           <Articles articles={articles} />
+          <Forms />
         </>
       </main>
     </>
