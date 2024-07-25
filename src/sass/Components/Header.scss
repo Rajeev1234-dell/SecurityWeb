@@ -1,10 +1,35 @@
+@import "../Particles/variables";
+
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 41px;
 
   &__logo {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &__links {
+    li {
+      display: inline-block;
+      margin-right: 32px;
+      color: $white-color;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $white-color;
+
+    .navbar__phone-number {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
   }
 }
