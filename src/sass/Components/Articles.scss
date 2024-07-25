@@ -1,0 +1,60 @@
+@import "../Particles/variables";
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.articles {
+  h2 {
+    text-align: center;
+  }
+
+  &__details {
+    display: flex;
+    margin-top: 73px;
+    justify-content: space-between;
+  }
+
+  .read-more {
+    position: absolute;
+    border-radius: 17px;
+    border: none;
+    padding: 8px 10px;
+    top: 0px;
+    left: 0px;
+    color: $white-color;
+    background: rgba(255, 255, 255, 0.527);
+    @include font-properties(8px, $font-light, $font-poppin);
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 8px;
+
+    .article__img {
+      border-radius: 8px;
+    }
+
+    .content {
+      color: $white-color;
+      position: absolute;
+      bottom: 25px;
+      left: 35px;
+    }
+
+    .date {
+      color: white;
+      position: absolute;
+      top: 33px;
+      right: 48px;
+      @include font-properties(12px, $font-light, $font-poppin);
+    }
+
+    .dateIcon {
+      position: absolute;
+      top: 0px;
+      right: 95px;
+    }
+  }
+}

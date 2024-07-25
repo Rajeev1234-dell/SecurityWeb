@@ -93,6 +93,31 @@ export const testimonials = [
   },
 ];
 
+// for articles section ------
+export const articles = [
+  {
+    title: "Read More",
+    img: "./ArticlesSection/article.svg",
+    dateIcon: "./ArticlesSection/dateIcon.svg",
+    date: "March 27, 2023",
+    content: "Top class securities agency to circulation applying us",
+  },
+  {
+    title: "Read More",
+    img: "./ArticlesSection/article.svg",
+    dateIcon: "./ArticlesSection/dateIcon.svg",
+    date: "March 27, 2023",
+    content: "Top class securities agency to circulation applying us",
+  },
+  {
+    title: "Read More",
+    img: "./ArticlesSection/article.svg",
+    dateIcon: "./ArticlesSection/dateIcon.svg",
+    date: "March 27, 2023",
+    content: "Top class securities agency to circulation applying us",
+  },
+];
+
 const jsonData = {
   itemList,
   mainContent,
