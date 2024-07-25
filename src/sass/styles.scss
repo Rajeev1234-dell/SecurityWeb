@@ -8,9 +8,15 @@
 @import "./Particles/mixins";
 @import "./Particles/typography";
 @import "./Particles/variables";
+@import "./Particles/commonClasses";
 
 // import components -------
 @import "./Components/Header.scss";
+@import "./Components/Hero.scss";
+@import "./Components/Button.scss";
+@import "./Components/Main.scss";
+@import "./Components/Service.scss";
+@import "./Components/Carousel.scss";
 
 * {
   margin: 0px;

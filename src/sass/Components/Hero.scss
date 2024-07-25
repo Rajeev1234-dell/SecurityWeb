@@ -1,0 +1,25 @@
+@import "../Particles/variables";
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.heroBack {
+  background-image: url("../../../public/HeroImages/background.svg");
+  background-size: cover;
+}
+
+.hero {
+  padding-top: 40px;
+  color: $white-color;
+  width: 594px;
+  padding-top: 156px;
+  padding-bottom: 250px;
+
+  h1 {
+    @include font-properties(60px, $font-bold, $font-sans);
+  }
+
+  p {
+    margin: 32px 0px;
+    padding-right: 109px;
+  }
+}

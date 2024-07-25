@@ -1,0 +1,13 @@
+@import "../Particles/variables";
+@import "../Particles/typography";
+@import "../Particles/mixins";
+
+.btn {
+  width: 148px;
+  height: 43px;
+  color: $white-color;
+  @include font-properties(1rem, $font-bold, $font-inter);
+  background: $primary-color;
+  border: none;
+  cursor: pointer;
+}

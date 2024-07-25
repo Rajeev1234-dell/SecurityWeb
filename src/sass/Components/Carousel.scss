@@ -1,0 +1,29 @@
+@import "../Particles/variables";
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.bg-color {
+  background-color: $primary-color;
+}
+
+.carousel {
+  padding: 75px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: $white-color;
+
+  p {
+    @include font-properties(16px, $font-light, $font-poppin);
+  }
+
+  &__item {
+    width: 194px;
+    height: 190px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-light-color;
+  }
+}
