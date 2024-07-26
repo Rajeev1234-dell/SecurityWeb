@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import data from "../json";
+
 //for importing components ---
 import Hero from "@/components/Hero";
 import Main from "@/components/Main";
@@ -12,11 +13,14 @@ import Security from "@/components/Security";
 import Testimonials from "@/components/Testimonials";
 import Articles from "@/components/Articles";
 import Forms from "@/components/Forms";
+import Footer from "@/components/Footer";
 
 // for json file----
 import { securityData } from "../json";
 import { testimonials } from "../json";
 import { articles } from "../json";
+import { footerItem } from "../json";
+import FooterBanner from "@/components/FooterBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +43,8 @@ export default function Home() {
           <Testimonials review={testimonials} />
           <Articles articles={articles} />
           <Forms />
+          {/* <FooterBanner item={footerItem}/> */}
+          <Footer item={footerItem} />
         </>
       </main>
     </>

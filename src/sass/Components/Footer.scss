@@ -1,0 +1,59 @@
+@import "../Particles/variables";
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.bg-color {
+  background: $black-color;
+}
+
+.footer__details {
+  padding-top: 180px;
+  display: flex;
+  gap: 122px;
+  justify-content: space-evenly;
+
+  &__items {
+    color: $white-color;
+
+    p {
+      margin-bottom: 19px;
+      font-weight: $font-large;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 12px;
+      @include font-properties(16px, $font-light, $font-poppin);
+    }
+  }
+
+  &__information {
+    .footer__details__content {
+      color: $white-color;
+      margin-top: 12px;
+      width: 337px;
+      @include font-properties(16px, $font-light, $font-poppin);
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.parent {
+  position: relative;
+  margin-top: 500px;
+  height: 450px;
+}
+
+.children {
+  position: absolute;
+  top: -150px;
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}

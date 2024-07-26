@@ -118,6 +118,26 @@ export const articles = [
   },
 ];
 
+//for footer Item ----
+export const footerItem = [
+  {
+    title: "Contact us",
+    items: ["about", "TOI", "about", "about"],
+  },
+  {
+    title: "Help",
+    items: ["security guard", "Special Guard", "Local Guard"],
+  },
+  {
+    title: "Case Study",
+    items: [
+      "Retail Security Upgrad",
+      "Campus Safety Solutions",
+      "Residential Patrol Services",
+    ],
+  },
+];
+
 const jsonData = {
   itemList,
   mainContent,
