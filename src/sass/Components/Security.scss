@@ -1,0 +1,65 @@
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.security {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+
+    // h2 {
+    //   @include font-properties(42px, $font-bold, $font-sans);
+    // }
+
+    p {
+      margin: 30px 0px;
+      padding-right: 58px;
+    }
+
+    li {
+      margin-top: 10px;
+      @include font-properties(1rem, $font-md, $font-poppin);
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__imgContainer {
+    width: 100%;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    padding: 8px 5px;
+    // padding: 12px;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  // for mobile view ---
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
+
+  // for tab view ---
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: column-reverse;
+  }
+}

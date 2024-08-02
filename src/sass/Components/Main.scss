@@ -1,0 +1,118 @@
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.main-section {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+
+  &__img {
+    width: 100%;
+    // padding: 12px;
+  }
+
+  &__pic {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    h3 {
+      @include font-properties(2.5rem, $font-bold, $font-sans);
+      padding-right: 108px;
+    }
+
+    p {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding-right: 134px;
+    }
+
+    li {
+      color: $primary-color;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      @include font-properties(1rem, $font-md, $font-poppin);
+    }
+  }
+
+  &__itemList {
+    margin-bottom: 30px;
+  }
+
+  &__dots {
+    margin-left: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    color: $black-color;
+  }
+
+  &__btn {
+    margin-top: 30px;
+  }
+
+  &__title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__logos {
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  &__icons {
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+  }
+
+  // for mobile view -------
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+
+    h1 {
+      padding-right: 0px;
+    }
+
+    p {
+      padding-right: 0px;
+    }
+  }
+
+  // for tab view ------
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    h1 {
+      padding-right: 0px;
+    }
+    p {
+      padding-right: 0px;
+    }
+  }
+
+  // for laptop view ------
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: column-reverse;
+
+    h1 {
+      padding-right: 0px;
+    }
+    p {
+      padding-right: 0px;
+    }
+  }
+}

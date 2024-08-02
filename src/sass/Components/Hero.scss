@@ -1,0 +1,68 @@
+@import "../Particles/variables";
+@import "../Particles/mixins";
+@import "../Particles/typography";
+
+.hero {
+  margin-top: 0px;
+  width: 100%;
+  background-image: url("../../../public/HeroImages/background.svg");
+  background-size: cover;
+  background-position: 100%;
+  background-position: left;
+
+  &__wrapper {
+    color: $white-color;
+    max-width: 594px;
+    padding-top: 158px;
+    padding-bottom: 250px;
+  }
+  &__title {
+    @include font-properties(60px, $font-bold, $font-sans);
+  }
+
+  &__desc {
+    margin: 32px 0px;
+    padding-right: 109px;
+  }
+
+  // for mobile view ---------
+  @media screen and (max-width: 576px) {
+    padding-top: 0px;
+
+    &__title {
+      font-size: 45px;
+      padding-right: 0px;
+    }
+
+    &__wrapper {
+      padding-top: 70px;
+    }
+
+    &__desc {
+      margin: 32px 0px;
+      padding-right: 0px;
+    }
+  }
+
+  // for tab view ---------
+  // @media screen and (max-width: 768px) {
+  //   padding: 0px;
+
+  //   &__title {
+  //     padding-right: 0px;
+  //   }
+
+  //   &__wrapper {
+  //     padding-top: 70px;
+  //     padding-bottom: 200px;
+  //   }
+  // }
+}
+
+// .hero {
+//   margin-top: 0px;
+//   width: 100%;
+//   // height: 200px;
+//   background: url("../../../public/HeroImages/background.svg");
+//   background-size: cover;
+// }

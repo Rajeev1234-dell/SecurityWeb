@@ -1,10 +1,101 @@
+@import "../Particles/variables";
+
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
 
   &__logo {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &__links {
+    li {
+      display: inline-block;
+      margin-right: 32px;
+      @include font-properties(1rem, $font-regular, $font-inter);
+    }
+    a {
+      text-decoration: none;
+      color: $white-color;
+    }
+
+    a:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__phone-number {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $white-color;
+  }
+
+  &__arrow {
+    display: none;
+  }
+
+  // for mobile view ----------
+  @media screen and (max-width: 576px) {
+    // padding: 10px;
+
+    &__links {
+      display: none;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__arrow {
+      display: block;
+    }
+  }
+
+  // for tab view --------------
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    &__links {
+      display: none;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__arrow {
+      display: block;
+    }
+  }
+
+  // for laptop view ------
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    &__phone-number {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &__links {
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        @include font-properties(1rem, $font-regular, $font-inter);
+      }
+    }
+
+    &__phone-number {
+      display: none;
+    }
   }
 }

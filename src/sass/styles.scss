@@ -8,9 +8,24 @@
 @import "./Particles/mixins";
 @import "./Particles/typography";
 @import "./Particles/variables";
+@import "./Particles/commonClasses";
+// @import "./Particles/_mediaqueries";
 
 // import components -------
 @import "./Components/Header.scss";
+@import "./Components/Hero.scss";
+@import "./Components/Hero2.scss";
+@import "./Components/Button.scss";
+@import "./Components/Main.scss";
+@import "./Components/Service.scss";
+@import "./Components/Carousel.scss";
+@import "./Components/Security.scss";
+@import "./Components/Cards.scss";
+@import "./Components/Testimonials.scss";
+@import "./Components/Articles.scss";
+@import "./Components/Forms.scss";
+@import "./Components/FooterBanner.scss";
+@import "./Components/Footer.scss";
 
 * {
   margin: 0px;

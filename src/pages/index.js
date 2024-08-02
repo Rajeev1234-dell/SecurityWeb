@@ -2,8 +2,31 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import data from "../json";
-import Header from "@/components/Header";
+
+//for importing components ---
+import Hero from "@/components/Hero";
+import Main from "@/components/Main";
+import Carousel from "@/components/Carousel";
+import Service from "@/components/Service";
+import Security from "@/components/Security";
+import Testimonials from "@/components/Testimonials";
+import Articles from "@/components/Articles";
+import Forms from "@/components/Forms";
+import Footer from "@/components/Footer";
+
+// for json file----
+import {
+  serviceSection,
+  mainSection,
+  headerSection,
+  securitySection,
+  testimonials,
+  articles,
+  footerItem,
+  heroSection,
+  carouselSection,
+} from "../json";
+import FooterBanner from "@/components/FooterBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +41,16 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <>
-          <Header data={data.itemList} />
+          <Hero heroSection={heroSection} headerSection={headerSection} />
+          <Main mainSection={mainSection} />
+          <Service serviceSection={serviceSection} />
+          <Security securitySection={securitySection} />
+          <Carousel carouselSection={carouselSection} />
+          <Testimonials testimonials={testimonials} />
+          <Articles articles={articles} />
+          <Forms />
+          {/* <FooterBanner /> */}
+          <Footer item={footerItem} />
         </>
       </main>
     </>
