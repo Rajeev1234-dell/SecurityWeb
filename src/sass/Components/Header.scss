@@ -48,6 +48,8 @@
 
   // for mobile view ----------
   @media screen and (max-width: 576px) {
+    // padding: 10px;
+
     &__links {
       display: none;
     }
@@ -82,6 +84,18 @@
       display: flex;
       align-items: center;
       gap: 6px;
+    }
+
+    &__links {
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        @include font-properties(1rem, $font-regular, $font-inter);
+      }
+    }
+
+    &__phone-number {
+      display: none;
     }
   }
 }
