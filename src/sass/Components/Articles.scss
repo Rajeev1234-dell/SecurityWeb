@@ -3,17 +3,63 @@
 @import "../Particles/typography";
 
 .articles {
-  h2 {
+  &__title {
     text-align: center;
   }
 
-  &__details {
+  &__wrapper {
     display: flex;
     margin-top: 73px;
     justify-content: space-between;
   }
 
-  .read-more {
+  &__item {
+    position: relative;
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__profile {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__content {
+    color: $white-color;
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+  }
+
+  &__date {
+    color: white;
+    position: absolute;
+    top: 33px;
+    right: 48px;
+    @include font-properties(12px, $font-light, $font-poppin);
+  }
+
+  &__dateIcon {
+    position: absolute;
+    top: 0px;
+    right: 95px;
+  }
+
+  &__btn {
     position: absolute;
     border-radius: 17px;
     border: none;
@@ -28,33 +74,45 @@
     cursor: pointer;
   }
 
-  &__item {
-    position: relative;
-    border-radius: 8px;
+  // for mobile view --------
+  @media screen and (max-width: 576px) {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
 
-    .article__img {
+  // for tab view ------
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    &__wrapper {
+      gap: 20px;
+    }
+
+    &__item {
+      position: relative;
       border-radius: 8px;
+      margin-top: 30px;
     }
 
-    .content {
-      color: $white-color;
-      position: absolute;
-      bottom: 25px;
-      left: 35px;
+    &__btn {
+      left: 10px;
     }
 
-    .date {
+    &__date {
       color: white;
       position: absolute;
       top: 33px;
-      right: 48px;
+      right: 10px;
       @include font-properties(12px, $font-light, $font-poppin);
-    }
-
-    .dateIcon {
-      position: absolute;
-      top: 0px;
-      right: 95px;
     }
   }
 }

@@ -1,5 +1,6 @@
 @import "./typography";
 @import "./mixins";
+@import "./variables";
 
 h2 {
   @include font-properties(48px, $font-bold, $font-sans);
@@ -10,12 +11,51 @@ p {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1180px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: auto;
-  padding: 0px 40px;
 }
 
 .container-fluid {
   width: 100%;
   margin: auto;
 }
+
+section {
+  margin-top: 152px;
+}
+
+span {
+  color: $primary-light-color;
+}
+
+// for mobile screen ------------
+// @media screen and (max-width: 576px) {
+//   p {
+//     font-size: 16px;
+//   }
+
+//   h1 {
+//     font-size: 32px;
+//   }
+
+//   h2 {
+//     font-size: 28px;
+//   }
+// }
+
+// for tab view ---------
+// @media screen and (max-width: 767px) {
+//   p {
+//     font-size: 16px;
+//   }
+
+//   h1 {
+//     font-size: 16px;
+//   }
+
+//   h2 {
+//     font-size: 24px;
+//   }
+// }

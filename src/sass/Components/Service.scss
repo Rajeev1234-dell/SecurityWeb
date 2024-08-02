@@ -4,6 +4,7 @@
 
 .service {
   text-align: center;
+  width: 100%;
 
   &__data {
     margin: auto;
@@ -15,24 +16,36 @@
   }
 
   &__list {
+    width: 100%;
     margin-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(293px, 1fr));
     gap: 1.5rem;
+  }
 
-    &__items {
-      color: $white-color;
-      padding: 48px;
-      background-color: $bg-color;
+  &__items {
+    color: $white-color;
+    padding: 48px;
+    background-color: $bg-color;
+    border-radius: 4px;
 
-      h1 {
-        margin: 10px 0px;
-        @include font-properties(1.75rem, $font-regular, $font-poppin);
-      }
+    h3 {
+      margin: 10px 0px;
+      @include font-properties(28px, $font-regular, $font-poppin);
+    }
 
-      p {
-        @include font-properties(0.9rem, $font-regular, $font-poppin);
+    p {
+      @include font-properties(0.9rem, $font-regular, $font-poppin);
+    }
+  }
+
+  // for mobile view -----
+  @media screen and (max-width: 576px) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      &__items {
+        padding: 20px 0px;
       }
     }
   }

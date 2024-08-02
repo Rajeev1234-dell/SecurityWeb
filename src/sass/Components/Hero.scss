@@ -2,24 +2,49 @@
 @import "../Particles/mixins";
 @import "../Particles/typography";
 
-.heroBack {
+.hero {
   background-image: url("../../../public/HeroImages/background.svg");
   background-size: cover;
-}
+  background-position: left;
 
-.hero {
-  padding-top: 40px;
-  color: $white-color;
-  width: 594px;
-  padding-top: 156px;
-  padding-bottom: 250px;
-
-  h1 {
+  &__wrapper {
+    padding-top: 40px;
+    color: $white-color;
+    max-width: 594px;
+    padding-top: 158px;
+    padding-bottom: 250px;
+  }
+  &__title {
     @include font-properties(60px, $font-bold, $font-sans);
   }
 
-  p {
+  &__desc {
     margin: 32px 0px;
     padding-right: 109px;
+  }
+
+  // for mobile view ---------
+  @media screen and (max-width: 576px) {
+    padding-top: 50px;
+
+    &__title {
+      // margin-top: 30px;
+      font-size: 45px;
+      padding-right: 0px;
+    }
+  }
+
+  // for tab view ---------
+  @media screen and (max-width: 576px) {
+    padding: 0px;
+
+    &__title {
+      padding-right: 0px;
+    }
+
+    &__wrapper {
+      padding-top: 70px;
+      padding-bottom: 200px;
+    }
   }
 }

@@ -1,19 +1,15 @@
 import React from "react";
 
-function Carousel({ data }) {
+function Carousel({ carouselSection }) {
   return (
-    <section className="margin-top">
-      <div className="container-fluid bg-color">
-        <div className="container">
-          <div className="carousel">
-            {data?.map((item, index) => (
-              <div className="carousel__item">
-                <h2>{item.no}</h2>
-                <p>{item.desc}</p>
-              </div>
-            ))}
+    <section className="background">
+      <div className="container carousel">
+        {carouselSection?.map((item, index) => (
+          <div className="carousel__item">
+            <h2>{item.no}</h2>
+            <p>{item.desc}</p>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -2,42 +2,32 @@
 @import "../Particles/typography";
 @import "../Particles/mixins";
 
-.bg-img {
+.form {
   background-image: url("../../../public/HeroImages/background.svg");
   background-size: cover;
-}
-
-.forms-section {
-  padding-top: 70px;
-  padding-bottom: 96px;
+  padding: 70px 0px 96px 0px;
 
   input {
     padding: 21px;
     margin-top: 17px;
     height: 60px;
     width: 100%;
+    border-radius: 4px;
+  }
+
+  ::placeholder {
     @include font-properties(18px, $font-regular, $font-poppin);
     color: $black-color;
   }
 
-  h2 {
+  &__title {
+    color: $white-color;
     text-align: center;
   }
 
-  &__content {
-    max-width: 704px;
-    color: $white-color;
+  &__input {
+    width: 60%;
     margin: auto;
-
-    .messageInput {
-      width: 100%;
-      height: 74px;
-      margin-top: 19px;
-      margin-bottom: 20px;
-      padding: 10px 21px;
-      @include font-properties(18px, $font-regular, $font-poppin);
-      color: $black-color;
-    }
   }
 
   &__nameField {
@@ -45,5 +35,50 @@
     display: flex;
     gap: 20px;
     margin-top: 52px;
+  }
+
+  &__messageField {
+    width: 100%;
+    height: 74px;
+    margin-top: 19px;
+    margin-bottom: 20px;
+    padding: 10px 21px;
+    @include font-properties(18px, $font-regular, $font-poppin);
+    color: $black-color;
+    border-radius: 4px;
+  }
+
+  // For small device -------
+  @media screen and (max-width: 576px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    input {
+      margin-top: 20px;
+    }
+
+    &__messageField {
+      margin-top: 20px;
+    }
+
+    &__input {
+      width: 90%;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &__nameField {
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+    }
+  }
+
+  // For medium device -------
+  @media screen and (max-width: 768px) {
   }
 }

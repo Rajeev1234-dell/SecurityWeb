@@ -1,0 +1,18 @@
+@import "../Particles/mixins";
+@import "../Particles/variables";
+
+.bg {
+  background-image: url("../../../public/Frame\ 48095661.png");
+  background-size: cover;
+}
+
+.hero2 {
+  text-align: center;
+  padding-bottom: 103px;
+
+  &__title {
+    margin-top: 133px;
+    @include font-properties(60px, $font-bold, $font-sans);
+    color: $white-color;
+  }
+}

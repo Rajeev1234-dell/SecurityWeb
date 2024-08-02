@@ -1,0 +1,65 @@
+// For XX-Large Devices-------
+@media screen and (max-width: 1400px) {
+  .container {
+    min-width: 1320px;
+  }
+  p {
+    font-size: 24px;
+  }
+}
+
+// For X-Large Devices------
+@media screen and (max-width: 1200px) {
+  .container {
+    min-width: 1140px;
+  }
+  p {
+    font-size: 24px;
+  }
+}
+
+// For Large Devices-------
+@media screen and (max-width: 992px) {
+  .container {
+    min-width: 960px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+// For Medium Devices--------
+@media screen and (max-width: 768px) {
+  .container {
+    min-width: 720px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+// For Small Devices--------
+@media screen and (max-width: 576px) {
+  .container {
+    min-width: 540px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+// For Extra Small Devices-------
+@media screen and (max-width: 480px) {
+  .container {
+    min-width: 100%;
+  }
+
+  section {
+    margin-top: 100px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}

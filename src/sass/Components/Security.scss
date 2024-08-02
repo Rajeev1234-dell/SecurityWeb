@@ -6,30 +6,60 @@
   gap: 35px;
   align-items: center;
 
-  &__data {
+  &__content {
     width: 100%;
 
-    h1 {
-      @include font-properties(42px, $font-bold, $font-sans);
-    }
+    // h2 {
+    //   @include font-properties(42px, $font-bold, $font-sans);
+    // }
 
     p {
       margin: 30px 0px;
+      padding-right: 58px;
+    }
+
+    li {
+      margin-top: 10px;
+      @include font-properties(1rem, $font-md, $font-poppin);
     }
   }
 
-  &__img {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__imgContainer {
     width: 100%;
+  }
 
-    .image {
-      width: 90%;
-      border: 1px solid black;
-      padding: 8px 5px;
+  &__pic {
+    width: 100%;
+    height: 100%;
+    padding: 8px 5px;
+    // padding: 12px;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 5px;
-
-      img {
-        width: 100%;
-      }
     }
+  }
+
+  // for mobile view ---
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
+
+  // for tab view ---
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: column-reverse;
   }
 }

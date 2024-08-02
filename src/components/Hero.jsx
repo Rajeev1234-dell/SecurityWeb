@@ -2,21 +2,19 @@ import React from "react";
 import Header from "./Header";
 import Button from "./Button";
 
-function Hero({ data }) {
+function Hero({ heroSection, headerSection }) {
+  var log = heroSection.title;
   return (
-    <section>
-      <div className="container-fluid heroBack">
-        <div className="container">
-          <Header data={data} />
-          <div className="hero">
-            <h1>Security Service For Your Personal Safety</h1>
-            <p>
-              only five centuries, but also the leap into electronic
-              typesetting, remainingt essentially uncthanged. It was
-              popularised.
-            </p>
-            <Button children={"Order Now"} />
-          </div>
+    <section className="container-fluid hero">
+      <div className="container">
+        <Header headerSection={headerSection} />
+        <div className="hero__wrapper">
+          <h1
+            className="hero__title"
+            dangerouslySetInnerHTML={{ __html: log }}
+          ></h1>
+          <p className="hero__desc">{heroSection.desc}</p>
+          <Button children={heroSection.btn} />
         </div>
       </div>
     </section>

@@ -1,26 +1,22 @@
 import Image from "next/image";
 import React from "react";
 
-function Service({ items }) {
+function Service({ serviceSection }) {
   return (
-    <section className="margin-top">
-      <div className="container">
-        <div className="service">
-          <div className="service__data">
-            <h2>Our Services Make Your Work Productive</h2>
-            <p>
-              only five centuries, but also the leap into electronic typed when
-            </p>
-          </div>
-          <div className="service__list">
-            {items?.map((items, index) => (
-              <div className="service__list__items">
-                <Image src={items.icon} width={72} height={72} alt="" />
-                <h1>{items.title}</h1>
-                <p>{items.desc}</p>
-              </div>
-            ))}
-          </div>
+    <section>
+      <div className="container service">
+        <div className="service__data">
+          <h2>{serviceSection.title}</h2>
+          <p>{serviceSection.desc}</p>
+        </div>
+        <div className="service__list">
+          {serviceSection.lists?.map((items, index) => (
+            <div className="service__items">
+              <Image src={items.icon} width={72} height={72} alt="" />
+              <h3>{items.title}</h3>
+              <p>{items.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,10 +1,11 @@
 @import "../Particles/variables";
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 41px;
+  padding-top: 30px;
 
   &__logo {
     display: flex;
@@ -16,8 +17,22 @@
     li {
       display: inline-block;
       margin-right: 32px;
+      @include font-properties(1rem, $font-regular, $font-inter);
+    }
+    a {
+      text-decoration: none;
       color: $white-color;
     }
+
+    a:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__phone-number {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   &__buttons {
@@ -25,8 +40,45 @@
     align-items: center;
     gap: 20px;
     color: $white-color;
+  }
 
-    .navbar__phone-number {
+  &__arrow {
+    display: none;
+  }
+
+  // for mobile view ----------
+  @media screen and (max-width: 576px) {
+    &__links {
+      display: none;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__arrow {
+      display: block;
+    }
+  }
+
+  // for tab view --------------
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    &__links {
+      display: none;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__arrow {
+      display: block;
+    }
+  }
+
+  // for laptop view ------
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    &__phone-number {
       display: flex;
       align-items: center;
       gap: 6px;
